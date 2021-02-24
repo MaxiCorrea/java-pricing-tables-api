@@ -1,0 +1,13 @@
+package com.maxicorrea.javapricingtablesapi;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class JavaPricingTablesApiApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
