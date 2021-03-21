@@ -4,11 +4,7 @@ import java.util.List;
 import lombok.Builder;
 import lombok.Data;
 
-/**
- * 
- * @author mxcorrea
- *
- */
+
 @Data
 @Builder
 public final class Table {
