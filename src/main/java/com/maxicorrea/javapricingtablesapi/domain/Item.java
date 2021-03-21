@@ -1,11 +1,33 @@
 package com.maxicorrea.javapricingtablesapi.domain;
-
-import lombok.Builder;
-import lombok.Data;
-
-@Data
-@Builder
+/**
+ * 
+ * @author mxcorrea
+ *
+ */
 public final class Item {
-  private Integer id;
-  private String text;
+  
+  public static final Item createOf(
+      final Integer id,
+      final String text) {
+    return new Item(id, text);
+  }
+  
+  private final Integer id;
+  private final String text;
+  
+  private Item(
+      final Integer id,
+      final String text) {
+    this.id = id;
+    this.text = text;
+  }
+  
+  public Integer getId() {
+    return id;
+  }
+  
+  public String getText() {
+    return text;
+  }
+  
 }
