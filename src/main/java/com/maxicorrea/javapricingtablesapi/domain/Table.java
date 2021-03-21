@@ -12,6 +12,7 @@ import lombok.Data;
 @Data
 @Builder
 public final class Table {
+  private Integer id;
   private String title;
   private String color;
   private Integer price;
