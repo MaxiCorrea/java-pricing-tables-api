@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.maxicorrea.javapricingtablesapi.domain.Item;
 import com.maxicorrea.javapricingtablesapi.domain.Table;
 import com.maxicorrea.javapricingtablesapi.repository.ItemRepository;
 import com.maxicorrea.javapricingtablesapi.repository.TableRepository;
@@ -15,8 +16,8 @@ import com.maxicorrea.javapricingtablesapi.repository.TableRepository;
 @Service
 public class TableService {
 
-  private final ItemRepository itemRepository;
-  private final TableRepository tableRepository;
+  private ItemRepository itemRepository;
+  private TableRepository tableRepository;
 
   @Autowired
   public TableService(
@@ -26,11 +27,13 @@ public class TableService {
     this.tableRepository = tableRepository;
   }
 
-  public final List<Table> findAll() {
+  public List<Table> findAll() {
     List<Table> tablesFromDb = new ArrayList<>();
-    tableRepository.findAll().forEach(
-        (table) -> itemRepository.findForTable(table).forEach(
-            (item) -> table.addNewItem(item)));
+    for(Table table : tableRepository.findAll()) {
+      List<Item> itemTable = itemRepository.findForTable(table);
+      table.getItems().addAll(itemTable);
+      tablesFromDb.add(table);
+    }
     return tablesFromDb;
   }
 

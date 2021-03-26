@@ -100,11 +100,6 @@ public final class Table {
     return url;
   }
 
-  public void addNewItem(
-      final Item newItem) {
-    getItems().add(newItem);
-  }
-  
   public List<Item> getItems() {
     return items;
   }

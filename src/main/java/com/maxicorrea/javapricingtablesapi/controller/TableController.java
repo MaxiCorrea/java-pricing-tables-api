@@ -15,7 +15,7 @@ import com.maxicorrea.javapricingtablesapi.service.TableService;
 @RestController
 public class TableController {
 
-  private final TableService tableService;
+  private TableService tableService;
   
   @Autowired
   public TableController(
@@ -24,7 +24,7 @@ public class TableController {
   }
   
   @GetMapping("/tables")
-  public final List<Table> tables() {
+  public List<Table> tables() {
     return tableService.findAll();
   }
   
