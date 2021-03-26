@@ -1,6 +1,5 @@
 package com.maxicorrea.javapricingtablesapi;
 
-import java.net.URI;
 import java.net.URISyntaxException;
 import java.sql.SQLException;
 import org.springframework.beans.factory.annotation.Value;
@@ -35,12 +34,8 @@ public class JavaPricingTablesApiApplication {
 
   @Bean
   public HikariDataSource dataSource() throws URISyntaxException {
-    System.out.println(dbUrl);
-    URI dbUri = new URI(dbUrl);
     HikariConfig config = new HikariConfig();
-    config.setUsername(dbUri.getUserInfo().split(":")[0]);
-    config.setPassword(dbUri.getUserInfo().split(":")[1]);
-    config.setJdbcUrl("jdbc:postgresql://" + dbUri.getHost() + dbUri.getPath());
+    config.setJdbcUrl(dbUrl);
     return new HikariDataSource(config);
   }
 
