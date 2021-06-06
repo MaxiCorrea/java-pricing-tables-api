@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.maxicorrea.javapricingtablesapi.domain.Item;
 import com.maxicorrea.javapricingtablesapi.domain.Table;
 import com.maxicorrea.javapricingtablesapi.repository.ItemRepository;
 import com.maxicorrea.javapricingtablesapi.repository.TableRepository;
@@ -30,8 +29,7 @@ public class TableService {
   public List<Table> findAll() {
     List<Table> tablesFromDb = new ArrayList<>();
     for(Table table : tableRepository.findAll()) {
-      List<Item> itemTable = itemRepository.findForTable(table);
-      table.getItems().addAll(itemTable);
+      table.addItems(itemRepository.findForTable(table));
       tablesFromDb.add(table);
     }
     return tablesFromDb;

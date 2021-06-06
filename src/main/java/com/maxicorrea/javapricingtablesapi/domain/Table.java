@@ -1,6 +1,8 @@
 package com.maxicorrea.javapricingtablesapi.domain;
 
+import static java.util.Collections.unmodifiableList;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 /**
  * 
@@ -80,6 +82,15 @@ public final class Table {
     items = builder.items;
   }
 
+  public void addItems(
+      final Collection<Item> items) {
+    this.items.addAll(items);
+  }
+
+  public List<Item> getItems() {
+    return unmodifiableList(items);
+  }
+  
   public Integer getId() {
     return id;
   }
@@ -100,8 +111,4 @@ public final class Table {
     return url;
   }
 
-  public List<Item> getItems() {
-    return items;
-  }
-  
 }
