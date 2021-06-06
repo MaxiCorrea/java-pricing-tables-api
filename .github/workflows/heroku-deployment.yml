@@ -1,0 +1,17 @@
+name: Java CI
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      - name: Deploy to heroku
+        uses: akhileshns/heroku-deploy@v3.2.6
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_TOKEN}}
+          heroku_app_name: "java-pricing-tables-api" 
+          heroku_email: "jmaxicorrea@gmail.com"
