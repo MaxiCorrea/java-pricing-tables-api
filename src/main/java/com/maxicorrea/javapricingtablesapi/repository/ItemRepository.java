@@ -26,14 +26,14 @@ public class ItemRepository {
         ));
     items.put(Integer.valueOf(2), Arrays.asList(
         Item.createOf(1, "50 Emails"),
-        Item.createOf(2, "5GB Disk Space"),
-        Item.createOf(3, "5GB Bandwidth"),
+        Item.createOf(2, "10GB Disk Space"),
+        Item.createOf(3, "10GB Bandwidth"),
         Item.createOf(4, "Unlimited Domains")
       ));
     items.put(Integer.valueOf(3), Arrays.asList(
         Item.createOf(1, "50 Emails"),
-        Item.createOf(2, "5GB Disk Space"),
-        Item.createOf(3, "5GB Bandwidth"),
+        Item.createOf(2, "6GB Disk Space"),
+        Item.createOf(3, "6GB Bandwidth"),
         Item.createOf(4, "Unlimited Domains")
       ));
     return items.get(table.getId());

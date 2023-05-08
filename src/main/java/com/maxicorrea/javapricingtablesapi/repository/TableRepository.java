@@ -22,23 +22,23 @@ public class TableRepository {
         .color("basic")
         .title("Basic")
         .price(Integer.valueOf(140))
-        .url("")
+        .url("https://maxicorrea.github.io/react-pricing-tables/")
         .build());
     tables.put(Integer.valueOf(2), 
         Table.builder()
         .id(Integer.valueOf(2))
-        .color("basic")
-        .title("Basic")
-        .price(Integer.valueOf(140))
-        .url("")
+        .color("enterprise")
+        .title("Enterprise")
+        .price(Integer.valueOf(200))
+        .url("https://maxicorrea.github.io/react-pricing-tables/")
         .build());
     tables.put(Integer.valueOf(3), 
         Table.builder()
         .id(Integer.valueOf(3))
-        .color("basic")
-        .title("Basic")
-        .price(Integer.valueOf(140))
-        .url("")
+        .color("standard")
+        .title("Standard")
+        .price(Integer.valueOf(400))
+        .url("https://maxicorrea.github.io/react-pricing-tables/")
         .build());
     return new ArrayList<>(tables.values());
   }

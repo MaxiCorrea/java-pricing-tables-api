@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.maxicorrea.javapricingtablesapi.JavaPricingTablesApiApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.982 s - in com.maxicorrea.javapricingtablesapi.JavaPricingTablesApiApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.633 s - in com.maxicorrea.javapricingtablesapi.JavaPricingTablesApiApplicationTests
