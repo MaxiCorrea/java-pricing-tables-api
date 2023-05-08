@@ -1,0 +1,10 @@
+com/maxicorrea/javapricingtablesapi/domain/Table$Builder.class
+com/maxicorrea/javapricingtablesapi/controller/TableController.class
+com/maxicorrea/javapricingtablesapi/repository/TableRepository.class
+com/maxicorrea/javapricingtablesapi/service/TableService.class
+com/maxicorrea/javapricingtablesapi/JavaPricingTablesApiApplication.class
+com/maxicorrea/javapricingtablesapi/domain/Item.class
+com/maxicorrea/javapricingtablesapi/domain/Table$1.class
+com/maxicorrea/javapricingtablesapi/repository/ItemRepository.class
+com/maxicorrea/javapricingtablesapi/utils/RepositoryUtils.class
+com/maxicorrea/javapricingtablesapi/domain/Table.class

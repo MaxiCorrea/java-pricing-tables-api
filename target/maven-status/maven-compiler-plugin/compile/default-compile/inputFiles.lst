@@ -1,0 +1,8 @@
+/home/mcorrea/Development/WorkspaceSpringToolSuite/java-pricing-tables-api/src/main/java/com/maxicorrea/javapricingtablesapi/JavaPricingTablesApiApplication.java
+/home/mcorrea/Development/WorkspaceSpringToolSuite/java-pricing-tables-api/src/main/java/com/maxicorrea/javapricingtablesapi/domain/Item.java
+/home/mcorrea/Development/WorkspaceSpringToolSuite/java-pricing-tables-api/src/main/java/com/maxicorrea/javapricingtablesapi/controller/TableController.java
+/home/mcorrea/Development/WorkspaceSpringToolSuite/java-pricing-tables-api/src/main/java/com/maxicorrea/javapricingtablesapi/domain/Table.java
+/home/mcorrea/Development/WorkspaceSpringToolSuite/java-pricing-tables-api/src/main/java/com/maxicorrea/javapricingtablesapi/service/TableService.java
+/home/mcorrea/Development/WorkspaceSpringToolSuite/java-pricing-tables-api/src/main/java/com/maxicorrea/javapricingtablesapi/utils/RepositoryUtils.java
+/home/mcorrea/Development/WorkspaceSpringToolSuite/java-pricing-tables-api/src/main/java/com/maxicorrea/javapricingtablesapi/repository/ItemRepository.java
+/home/mcorrea/Development/WorkspaceSpringToolSuite/java-pricing-tables-api/src/main/java/com/maxicorrea/javapricingtablesapi/repository/TableRepository.java

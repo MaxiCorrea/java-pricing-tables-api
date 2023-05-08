@@ -1,6 +1,6 @@
 bin/
 HELP.md
-target/
+#target/ Deploy in Render
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
