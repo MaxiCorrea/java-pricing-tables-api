@@ -1,14 +1,12 @@
 package com.maxicorrea.javapricingtablesapi.repository;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
+import java.util.Map;
 import org.springframework.stereotype.Repository;
 import com.maxicorrea.javapricingtablesapi.domain.Item;
 import com.maxicorrea.javapricingtablesapi.domain.Table;
-import com.maxicorrea.javapricingtablesapi.utils.RepositoryUtils;
 /**
  * 
  * @author mxcorrea
@@ -17,30 +15,28 @@ import com.maxicorrea.javapricingtablesapi.utils.RepositoryUtils;
 @Repository
 public class ItemRepository {
 
-  private static final String FIND_QUERY = "SELECT * FROM pricing_table_item WHERE pricing_table_id=%d";
-  private JdbcTemplate jdbcTemplate;
-
-  @Autowired
-  public ItemRepository(
-      final JdbcTemplate jdbcTemplate) {
-    this.jdbcTemplate = jdbcTemplate;
-  }
-
   public List<Item> findForTable(
       final Table table) {
-    try {
-      final Integer idTable = table.getId();
-      final String sql = String.format(FIND_QUERY, idTable);
-      List<Item> itemsForTable = new ArrayList<>();
-      jdbcTemplate.queryForList(sql).forEach((args)-> itemsForTable.add(
-          Item.createOf(
-              RepositoryUtils.toInteger(args, "id"),
-              RepositoryUtils.toString(args, "details"))));
-      return itemsForTable;
-    } catch(Exception ex) {
-      ex.printStackTrace();
-      return Collections.emptyList();
-    }
+    Map<Integer , List<Item>> items = new HashMap<>();
+    items.put(Integer.valueOf(1), Arrays.asList(
+          Item.createOf(1, "50 Emails"),
+          Item.createOf(2, "5GB Disk Space"),
+          Item.createOf(3, "5GB Bandwidth"),
+          Item.createOf(4, "Unlimited Domains")
+        ));
+    items.put(Integer.valueOf(2), Arrays.asList(
+        Item.createOf(1, "50 Emails"),
+        Item.createOf(2, "5GB Disk Space"),
+        Item.createOf(3, "5GB Bandwidth"),
+        Item.createOf(4, "Unlimited Domains")
+      ));
+    items.put(Integer.valueOf(3), Arrays.asList(
+        Item.createOf(1, "50 Emails"),
+        Item.createOf(2, "5GB Disk Space"),
+        Item.createOf(3, "5GB Bandwidth"),
+        Item.createOf(4, "Unlimited Domains")
+      ));
+    return items.get(table.getId());
   }
   
 }
