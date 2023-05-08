@@ -34,6 +34,7 @@
 		</dependency>
 	</dependencies>
 	<build>
+		<finalName>java-pricing-tables-api</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -50,12 +51,6 @@
 								<java.source>${maven.compiler.source}</java.source>
 								<java.target>${maven.compiler.target}</java.target>
 							</additionalProperties>
-							<excludes>
-								<exclude>
-									<groupId>org.projectlombok</groupId>
-									<artifactId>lombok</artifactId>
-								</exclude>
-							</excludes>
 						</configuration>
 					</execution>
 				</executions>
